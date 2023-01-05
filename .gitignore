@@ -1,18 +1,87 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+runtests/
+debug/
+release/
+test/
+data/
+out/
+.vs/
+*.db3
+*db3bak
+#created from qmake
+.qmake.stash
+.qmake.cash
+Makefile
+Makefile.debug
+Makefile.release
+.vscode/
+uic_wrapper.bat
+uic_wrapper.sh
+DkVerwaltungsQt.ini
+*.autosave
+*.pro.user
+*.old
+test_datum.s3db
+*.tmp
+*.keep
+# C++ objects and libs
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+# Qt-es
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+Makefile*
+*build-*
+*.qm
+hometmptmp*
+# Qt unit tests
+target_wrapper.*
 
-# Other files and folders
-.settings/
+# QtCreator
+*.autosave
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# QtCreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# QtCreator CMake
+CMakeLists.txt.user*
+
+# QtCreator 4.8< compilation database
+compile_commands.json
+
+# QtCreator local machine specific files for imported projects
+*creator.user*
+
+# msi creation
+DKV2/wix/*.msi
+DKV2/wix/*.bak
+DKV2/wix/*.wixobj
+DKV2/wix/*.wixpdb
+DKV2/wix/*.log
+
+# stuff
+DOCS/Screenshots
+
+# macos
+.DS_Store
