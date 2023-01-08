@@ -74,6 +74,12 @@ void MainWindow::on_pbexit_2_clicked()
         if( not db.open ())
             qCritical() << "failed to open source db for creation";
 
+        // WAL mode is not necessary// switch to WAL mode for not having to have shared cache mode
+        QSqlQuery wal =db.exec ("PRAGMA journal_mode=WAL");
+        wal.next ();
+        if( wal.record ().value (0).toString() not_eq "wal")
+            qCritical() << "failed to switch to WAL mode: " << wal.lastError ();
+
         QSqlQuery q(db);
         if( not q.exec ("CREATE TABLE IF NOT EXISTS t (f TEXT PRIMARY KEY)"))
             qCritical() << "failed to create table" << q.lastError ();
